@@ -1,0 +1,42 @@
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mission.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @mission.subtitle %>
+</p>
+
+</div>
+</div>
+
+<p>
+  <strong>Boxtitle:</strong>
+  <% if @mission.picone.present?%>
+  <%= image_tag @mission.picone.url(:medium) %>
+  <% else %>
+  No Image
+  <% end %>
+</p>
+
+<p>
+  <strong>Boxtitle:</strong>
+  <%= @mission.boxtitle %>
+</p>
+
+<p>
+  <strong>Boxinfo:</strong>
+  <%= @mission.boxinfo %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>
+</section>

@@ -1,0 +1,40 @@
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Missions</h1>
+<h2>Missions</h2>
+
+</div>
+</div>
+
+
+<div class="row">
+    <% @missions.each do |mission| %>
+    <div class="col-md-4">
+      <div class="card">
+           <div class="card-topper">
+              <%= mission.title %>
+                <% if mission.picone.present?%>
+                    <%= image_tag mission.picone.url(:thumb), style: "width:100%;" %>
+                  <% else %>
+                      No Image
+                <% end %>
+            </div>
+            <div class="card-block">
+              <h4 class="card-title"><%= mission.boxtitle %></h4>
+              <%= link_to 'LEARN MORE', mission %><br>
+              <%= link_to 'Edit', edit_mission_path(mission) %>
+              <%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Mission', new_mission_path %>
+</section>
