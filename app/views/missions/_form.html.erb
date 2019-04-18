@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: mission, local: true, html: {multipart: true}) do |form| %>
   <% if mission.errors.any? %>
     <div id="error_explanation">
@@ -11,31 +13,49 @@
     </div>
   <% end %>
 
+<div class="row">
+ <div class="col-md-12">
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, style:"width:100%;" %>
   </div>
+  <div class="field">
+    <%= form.label :subtitle %><br>
+    <%= form.text_field :subtitle, style:"width:100%;" %>
+  </div>
+  <div class="field">
+    <%= form.label :boxinfo %><br>
+    <%= form.text_area :boxinfo, style:"width:100%;" %>
+</div>
+</div>
+</div>
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
-  </div>
+<div class="row" style="margin-top:1rem;">
+    
+<div class="col-md-4">
+  <div class="card">
+  <div class="card-topper">
+<div class="field">
+      <%= form.label :picone, style:"color:#eeeeee;" %><br>
+      <%= form.file_field :picone, style:"color:#eeeeee;" %>
+    </div>
+</div>
 
-  <div class="field">
-    <%= form.label :boxtitle %>
-    <%= form.text_field :boxtitle %>
+<div class="card-block">
+      <h4 class="card-title">
+    <div class="field">
+      <%= form.label :boxtitle %><br>
+      <%= form.text_field :boxtitle %>
+    </div>
+  </h4>
   </div>
-
-  <div class="field">
-    <%= form.label :picone %>
-    <%= form.file_field :picone %>
+</div>
+</div>
+</div>
+<div class="row" style="margin-top:1rem; ">
+ <div class="col-md-12">
+  <%= form.submit 'Create Mission', class: "btn btn-lg btn-warning"%>
   </div>
-  <div class="field">
-    <%= form.label :boxinfo %>
-    <%= form.text_area :boxinfo %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>
+
