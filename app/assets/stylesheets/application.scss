@@ -13,14 +13,49 @@
  */
  @import "bootstrap";
   @import "missions";
+   @import "footer";
 
 /* Show it is fixed to the top */
 body {
-  min-height: 75rem;
+  min-height: 50rem;
   padding-top: 3.5rem;
 }
 
 .bg-dark
 {
 	background-color: #050505 !important;
+}
+
+
+h5
+{
+	font-family: Helvetica, sans-serif;
+	color: #fff;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+h6
+{
+	font-family: Helvetica, sans-serif;
+	color: #999;
+	line-height:1.5;
+	text-shadow: 1px 1px 1px #000000;
+	text-transform: uppercase;
+}
+
+
+.floatr
+{
+	float:right;
+}
+
+.top-margin
+{
+	margin-top:1rem
+}
+
+.bottom-margin
+{
+	margin-bottom:1rem
 }
