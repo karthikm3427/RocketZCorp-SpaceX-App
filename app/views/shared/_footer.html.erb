@@ -2,32 +2,27 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3">
-				<h5>Hello</h5>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
+				<h5>OUR AWESOME ROCKETZ</h5>
+				<h6>BIRDIE 10-1</h6>
+				<h6>FAT BIRDIE</h6>
+				<h6>ANCIENT BIRDIE</h6>
 			</div><!--col-lg-3 -->
 			<div class="col-lg-3">
-				<h5>Hello</h5>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
+				<h5>NEWS & UPDATES</h5>
+				<h6>NEWS</h6>
+				<h6>LAUNCH SCHEDULE</h6>
 			</div><!--col-lg-3 -->
 			<div class="col-lg-3">
-				<h5>Hello</h5>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
+				<h5>ABOUT US</h5>
+				<h6>COMPANY</h6>
+				<h6>CAREERS</h6>
+				<h6>GALLERY</h6>
 			</div><!--col-lg-3 -->
 			<div class="col-lg-3">
 				<%= image_tag 'rocketz1.jpg', style:"width:225px; margin-top:-30px;"%>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
-				<h6>Hello</h6>
+				<h6>000 ROCKET ROAD</h6>
+				<h6>SOCIAL CA</h6>
+				<h6>00000 USA</h6>
 			</div><!--col-lg-3 -->
 		</div><!--row -->
 			<div class="row top-margin bottom-margin">
@@ -38,10 +33,16 @@
 		        </form>
 		</div>
 			<div class="col-lg-6">
-				<form class="form-inline mt-2 mt-md-0 floatr">
+				<div class="form-inline mt-2 mt-md-0 floatr">
+					<%= form_tag search_missions_path, method: :get do %>
+					<%= text_field_tag :search, nil, placeholder: "Search ROCKETZ", class: "form-control mr-sm-2 bg-dark"%>
+					<%= submit_tag "Search", class: "btn btn-outline-info my-2 my-sm-0"%>
+					<% end %>
+				</div>
+				<!-- <form class="form-inline mt-2 mt-md-0 floatr">
 		          <input class="form-control mr-sm-2 bg-dark" type="text" placeholder="Search Rocketz" aria-label="Search">
 		          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-		        </form>
+		        </form> -->
 			</div>
 
 		</div><!--row -->
