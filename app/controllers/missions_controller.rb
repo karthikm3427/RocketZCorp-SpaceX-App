@@ -7,6 +7,13 @@ class MissionsController < ApplicationController
     @missions = Mission.all.order("created_at DESC").limit(3)
   end
 
+  def missionlist
+    @page = params['page'].to_i #integer => no.of page
+    @next_page = @page + 1 unless Mission.count < 8
+    @prev_page = @page - 1 unless @page == 0
+    @missions = Mission.all.order("created_at DESC").limit(8).offset(@page*8)
+  end
+
   # GET /missions/1
   # GET /missions/1.json
   def show

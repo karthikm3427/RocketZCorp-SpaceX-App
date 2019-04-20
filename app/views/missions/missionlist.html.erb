@@ -1,0 +1,47 @@
+<section class="container">
+	<div class="row top-margin bottom-margin" >
+		<div class="col-md-6"><h2><u>All Missions</u></h2></div>
+		<div class="col-md-6">
+			<div class="form-inline mt-2 mt-md-0 floatr">
+				<%= form_tag search_missions_path, method: :get do %>
+				<%= text_field_tag :search, nil, placeholder: "Search ROCKETZ", class: "form-control mr-sm-2"%>
+				<%= submit_tag "Search", class: "btn btn-light"%>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<% if @missions.count >= 8 %>
+			<%= link_to 'NEXT', missionlist_missions_path(:page => @next_page), class: "btn-sm btn-info floatr", style: "margin:2px;" %>
+			<% end %>
+			<% if @page > 0%>
+			<%= link_to 'PREVIOUS', missionlist_missions_path(:page => @prev_page), class: "btn-sm btn-info floatr", style: "margin:2px;" %>
+			<% end %>
+			<% if @missions.count < 8 %>
+			Sorry, this is the last Mission Page.
+			<% end %>
+		</div>
+
+	</div>
+	<div class="row bottom-margin">
+    <% @missions.each do |mission| %>
+    <div class="col-md-3">
+      <div class="card">
+           <div class="card-topper">
+              <%= mission.title %>
+                <% if mission.picone.present?%>
+                    <%= image_tag mission.picone.url(:thumb), style: "width:100%;" %>
+                  <% else %>
+                      No Image
+                <% end %>
+            </div>
+            <div class="card-block">
+              <h4 class="card-title"><%= mission.boxtitle %></h4>
+              <%= link_to 'LEARN MORE', mission %><br>
+              <%= link_to 'Edit', edit_mission_path(mission) %>
+              <%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+</div>
+</section>

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :missions do
   	collection do
-  		get :search  # creates a route for search
+  		get :search
+  		get :missionlist  # creates a route for search
   	end
   end
 
