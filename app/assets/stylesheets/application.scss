@@ -14,11 +14,14 @@
  @import "bootstrap";
   @import "missions";
    @import "footer";
+   @import "navigation";
 
 /* Show it is fixed to the top */
+
 body {
   min-height: 50rem;
   padding-top: 3.5rem;
+  font-family: 'Brandon Grotesque', 'brandon-grotesque-n7', 'brandon-grotesque', 'Helvetica,sans-serif;'
 }
 
 .bg-dark
@@ -26,23 +29,57 @@ body {
 	background-color: #050505 !important;
 }
 
+h1
+{color:#3a3a5a;}
+
+h2
+{
+   color:#3a3a4a;
+   line-height: 30px;
+}
+
+h3
+{
+	color:#2a3b6c;
+}
+
+h4
+{
+	font-weight: bold;
+	font-style: normal;
+	font-size:1.25rem;
+	color:#223338;
+}
 
 h5
 {
-	font-family: Helvetica, sans-serif;
+	
 	color: #fff;
 	padding-bottom: 1rem;
 	text-transform: uppercase;
+	padding-bottom: 1rem;
 }
+
+.h5
+{
+	color: #444444;
+}
+
 
 h6
 {
-	font-family: Helvetica, sans-serif;
 	color: #999;
 	line-height:1.5;
 	text-shadow: 1px 1px 1px #000000;
 	text-transform: uppercase;
 }
+
+h6
+{
+
+	text-shadow: 0px 0px 0px #000000;
+}
+
 
 
 .floatr
