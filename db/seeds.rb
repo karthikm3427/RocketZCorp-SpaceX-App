@@ -8,7 +8,7 @@
 
 images = %w(discovery.jpg rockets_earth.jpg rocketsss4.jpg rocketsss3.jpg mercury.jpg rocketsss1.jpg rocketsss.png)
 
-15.times do
+5.times do
 mission = Mission.create(
 	title: "Big Top Title",
 	subtitle: "Secondary title",

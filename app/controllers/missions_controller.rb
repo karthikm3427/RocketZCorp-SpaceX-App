@@ -8,6 +8,15 @@ class MissionsController < ApplicationController
   end
 
   def missionlist
+    @allmissions = Mission.count
+    @num_pages = @allmissions/8.0
+    @mod_pages = @num_pages % 1.0
+    @mod_pages = 1.0 - @mod_pages
+    if @mod_pages != 0
+      @num_pages = @num_pages + @mod_pages
+      else
+        @num_pages = @num_pages
+      end
     @page = params['page'].to_i #integer => no.of page
     @next_page = @page + 1 unless Mission.count < 8
     @prev_page = @page - 1 unless @page == 0
