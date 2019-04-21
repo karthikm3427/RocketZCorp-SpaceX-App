@@ -1,0 +1,26 @@
+<%= form_for :carousel, url: carousels_path, html:{multipart: true} do |f| %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="field">
+				<%= f.label :banner %>
+				<%= f.file_field :banner, class: "form-control"%>
+			</div>
+			<div class="field">
+				<%= f.label :slidetitle1 %>
+				<%= f.text_field :slidetitle1, class: "form-control"%>
+			</div>
+			<div class="field">
+				<%= f.label :slidetitle2 %>
+				<%= f.text_field :slidetitle2, class: "form-control"%>
+			</div><br>
+			<div class="action">
+				<%= f.submit 'Upload Banner', class: 'btn btn-md btn-info'%>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<% end %>

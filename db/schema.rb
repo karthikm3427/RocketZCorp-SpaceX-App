@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_182903) do
+ActiveRecord::Schema.define(version: 2019_04_21_161400) do
+
+  create_table "carousels", force: :cascade do |t|
+    t.string "slidetitle1"
+    t.string "slidetitle2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "banner_file_name"
+    t.string "banner_content_type"
+    t.integer "banner_file_size"
+    t.datetime "banner_updated_at"
+  end
 
   create_table "missions", force: :cascade do |t|
     t.string "title"
