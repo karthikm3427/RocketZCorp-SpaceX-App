@@ -28,14 +28,14 @@
 			<div class="row top-margin bottom-margin">
 		<div class="col-lg-6">
 				<form class="form-inline mt-2 mt-md-0">
-		          <input class="form-control mr-sm-2 bg-dark" type="text" placeholder="Sign Up for Latest News" aria-label="News Letter">
+		          <input class="form-control mr-sm-2 bg-dark form-border" type="text" placeholder="Sign Up for Latest News" aria-label="News Letter">
 		          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Submit</button>
 		        </form>
 		</div>
 			<div class="col-lg-6">
 				<div class="form-inline mt-2 mt-md-0 floatr">
-					<%= form_tag search_missions_path, method: :get do %>
-					<%= text_field_tag :search, nil, placeholder: "Search ROCKETZ", class: "form-control mr-sm-2 bg-dark"%>
+					<%= form_tag search_missions_path, class: 'full_width', method: :get do %>
+					<%= text_field_tag :search, nil, placeholder: "Search ROCKETZ", class: "form-control mr-sm-2 bg-dark form-border"%>
 					<%= submit_tag "Search", class: "btn btn-outline-info my-2 my-sm-0"%>
 					<% end %>
 				</div>
@@ -51,10 +51,10 @@
 		<div class="container">
 		<div class="row">
 		<div class="col-lg-6">
-			<span color="#eeeeee"> FOLLOW US : TWITTER | FACEBOOK | YOUTUBE </span>
+			<span color="#eeeeee"> FOLLOW US : <a href="#">TWITTER</a> | FACEBOOK | YOUTUBE </span>
 		</div>
 			<div class="col-lg-6">
-				<span color="#eeeeee"> 2019 &copy: findgovtjobs.in </span>
+				<span class="floatr" color="#eeeeee"> 2019 &copy: findgovtjobs.in </span>
 			</div>
 
 		</div><!--row -->

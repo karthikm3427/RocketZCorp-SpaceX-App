@@ -15,6 +15,7 @@
   @import "missions";
    @import "footer";
    @import "navigation";
+   @import "mediastyling";
 
 /* Show it is fixed to the top */
 
@@ -45,7 +46,7 @@ h3
 
 h4
 {
-	font-weight: bold;
+	
 	font-style: normal;
 	font-size:1.25rem;
 	color:#223338;
@@ -95,4 +96,32 @@ h6
 .bottom-margin
 {
 	margin-bottom:1rem
+}
+
+.form-border
+{
+	border: 0px solid #555555;
+}
+
+
+.border_bottom
+{
+	border-bottom: 0px dashed #444444;
+	margin-bottom: 1rem;
+}
+
+.btn-outline-info
+{
+	
+	background-color: #050505;
+	border: 0px solid #555555;
+}
+
+
+.btn-light
+{
+	border: 1px solid #cdcdcd;
+	padding: 7px;
+	background-color: #fff;
+	border-radius: 10%;
 }
