@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# RocketZCorp-SpaceX-App
+>>>>>>> 8a46df7397e45eb8e0f8382bd7f42247f0cf416c
