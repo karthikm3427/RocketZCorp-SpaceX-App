@@ -11,11 +11,12 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap";
-  @import "missions";
-   @import "footer";
-   @import "navigation";
-   @import "mediastyling";
+@import "bootstrap";
+@import "missions";
+@import "footer";
+@import "navigation";
+@import "mediastyling";
+@import "carousel";
 
 /* Show it is fixed to the top */
 
